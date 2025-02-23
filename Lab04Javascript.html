@@ -20,7 +20,6 @@
                         <label for="Name">Name:</label>
                         <input id="name" type="text" required>
                         <button onclick="alertfunction()">Alert Me!</button>
-                        
                     </form>
 
                     <!---Name Javascript Code-->
@@ -45,11 +44,32 @@
         <div class="second-container">
             <div class="second-area">
                 <div class="second-box">
-                    <form>
-                        <label for="Tester">Test Tester</label>
+
+                    <form name="contactForm" onsubmit="return formValidation()">
+                        <label for="tester">Test Tester:</label>
                         <input type="text"id="tester" required>
                         <button>Validate Text</button>
                     </form>
+
+                    <!---Name Javascript Code-->
+                    <script type="text/Javascript">
+                        function formValidation(){
+                            console.log('Validating user input:',document.contactForm.tester.value)
+                            const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                            if (document.contactForm.tester.value.trim() == ""){
+                                alert('How about...nah')
+                                return false;
+                            }
+
+                            if (validationRegex.test(document.contactForm.tester.value)){
+                                alert('How about...nah')
+                                return false
+                            }
+
+                        }
+
+                    </script>
+
 
                 </div>
             </div>
