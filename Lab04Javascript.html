@@ -7,9 +7,14 @@
 
     <body id="body">
         <!-- Header Section-->
+
          <header id = "bar">
-            <h1>INST377- Lab 4</h1>
+            <div id="HeaderName">
+            <h1 id="HeaderChange">INST377- Lab 4</h1>
+            </div>
          </header>
+
+       
 
 
          <div class="main-container">
@@ -49,7 +54,7 @@
                             }
                            
                             }
-                            
+
                         </script>
 
 
@@ -93,7 +98,23 @@
 
 
                 <aside id="Add-Text">
-                    <h1><Button>Add Text</Button></h1>
+                    <!---Add Text Javascript Code-->
+                    <h1><Button onclick="AddText()">Add Text</Button></h1>
+
+                    <script type="text/Javascript">
+                        function AddText(){
+                            const newElement = document.getElementById("HeaderChange");
+                            const AddText = document.createElement('AddText')
+                            AddText.textContent = 'strong';
+                            newElement.append(' - Adding Text')
+                           
+
+                        }
+
+
+                    </script>
+
+
                 </aside>
              </div>
 
