@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="Lab04.css">
     </head>
 
-    <body>
+    <body id="body">
         <!-- Header Section-->
          <header id = "bar">
             <h1>INST377- Lab 4</h1>
@@ -36,7 +36,24 @@
 
 
                     <aside id="contact">
-                        <h1><Button>Change Color<id=/Button></h1>
+                        <h1><button onclick="changeColor()">Change Color</button></h1>
+
+                        <!---Color Change Javascript Code-->
+
+                        <script type="text/Javascript">
+                            function changeColor() {
+                            if (document.body.style.background == 'green') {
+                                document.body.style.background = 'rgb(173, 211, 239)';
+                            } else {
+                                document.body.style.background = 'green';
+                            }
+                           
+                            }
+                            
+                        </script>
+
+
+
                     </aside>
                  </div>
                  
