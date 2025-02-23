@@ -1,5 +1,73 @@
 <html>
 
+    <head>
+        <title>Lab04 Javascript</title>
+        <link rel="stylesheet" href="Lab04.css">
+    </head>
+
+    <body>
+        <!-- Header Section-->
+         <header id = "bar">
+            <h1>INST377- Lab 4</h1>
+         </header>
+
+
+         <div class="main-container">
+            <div class="content-area">
+                <div class="content-box">
+
+                    <form name="contactName">
+                        <label for="Name">Name:</label>
+                        <input id="name" type="text" required>
+                        <button onclick="alertfunction()">Alert Me!</button>
+                        
+                    </form>
+
+                    <!---Name Javascript Code-->
+                    <script type="text/Javascript">
+                        function alertfunction() {
+                            var name = document.getElementById("name").value;
+                            alert("Hello " + name + "!")
+                        }
+
+                    </script>
+
+                    </div>
+                </div>
+
+
+                    <aside id="contact">
+                        <h1><Button>Change Color<id=/Button></h1>
+                    </aside>
+                 </div>
+                 
+
+        <div class="second-container">
+            <div class="second-area">
+                <div class="second-box">
+                    <form>
+                        <label for="Tester">Test Tester</label>
+                        <input type="text"id="tester" required>
+                        <button>Validate Text</button>
+                    </form>
+
+                </div>
+            </div>
+
+
+                <aside id="Add-Text">
+                    <h1><Button>Add Text</Button></h1>
+                </aside>
+             </div>
+
+        
+         
+
+
+
+
+         
+    </body>
 
 
 
