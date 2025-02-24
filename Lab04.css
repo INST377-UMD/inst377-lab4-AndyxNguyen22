@@ -12,7 +12,7 @@ body {
 .content-box {
     background-color: purple;
     color:black;
-    border: 2px solid black;
+    border: 2px solid white;
     margin-left: 5px;
     padding: 10px;
     border-radius: 15px;
@@ -28,7 +28,7 @@ body {
     float:left;
     width:40%;
     color:black;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 15px;
     margin-right: 10px;
     padding-left: 5px;
@@ -45,7 +45,7 @@ body {
 .second-box {
     background-color: purple;
     color:black;
-    border: 2px solid black;
+    border: 2px solid white;
     margin-left: 5px;
     padding: 10px;
     border-radius: 15px;
@@ -61,7 +61,7 @@ body {
     float:left;
     width:40%;
     color:black;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 15px;
     margin-right: 10px;
     padding-left: 5px;

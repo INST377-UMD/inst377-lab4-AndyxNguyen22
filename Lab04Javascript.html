@@ -30,8 +30,10 @@
                     <!---Name Javascript Code-->
                     <script type="text/Javascript">
                         function alertfunction() {
-                            var name = document.getElementById("name").value;
-                            alert("Hello " + name + "!")
+                           const inputElement = document.getElementById("name");
+                           if (inputElement.value) {
+                            alert("Hi " + inputElement.value + "!");
+                           }
                         }
 
                     </script>
@@ -68,7 +70,7 @@
                 <div class="second-box">
 
                     <form name="contactForm" onsubmit="return formValidation()">
-                        <label for="tester">Test Tester:</label>
+                        <label for="tester">Text Tester:</label>
                         <input type="text"id="tester" required>
                         <button>Validate Text</button>
                     </form>
