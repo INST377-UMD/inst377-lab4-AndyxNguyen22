@@ -1,0 +1,134 @@
+<html>
+
+    <head>
+        <title>Lab04 Javascript</title>
+        <link rel="stylesheet" href="Lab04.css">
+    </head>
+
+    <body id="body">
+        <!-- Header Section-->
+
+         <header id = "bar">
+            <div id="HeaderName">
+            <h1 id="HeaderChange">INST377- Lab 4</h1>
+            </div>
+         </header>
+
+       
+         <div class="main-container">
+            <div class="content-area">
+                <div class="content-box">
+
+                    <form name="contactName">
+                        <label for="Name">Name:</label>
+                        <input id="name" type="text" required>
+                        <button onclick="alertfunction()">Alert Me!</button>
+                    </form>
+
+                    <!---Name Javascript Code-->
+                    <script type="text/Javascript">
+                        function alertfunction() {
+                           const inputElement = document.getElementById("name");
+                           if (inputElement.value) {
+                            alert("Hi " + inputElement.value + "!");
+                           }
+                        }
+
+                    </script>
+
+                    </div>
+                </div>
+
+
+                    <aside id="contact">
+                        <h1><button onclick="changeColor()">Change Color</button></h1>
+
+                        <!---Color Change Javascript Code-->
+                        <script type="text/Javascript">
+                            function changeColor() {
+                            if (document.body.style.background == 'green') {
+                                document.body.style.background = 'rgb(173, 211, 239)';
+                            } else {
+                                document.body.style.background = 'green';
+                            }
+                        }
+                            
+
+                        </script>
+
+
+
+                    </aside>
+                 </div>
+                 
+
+        <div class="second-container">
+            <div class="second-area">
+                <div class="second-box">
+
+                    <form name="contactForm" onsubmit="return formValidation()">
+                        <label for="tester">Text Tester:</label>
+                        <input type="text"id="tester" required>
+                        <button>Validate Text</button>
+                    </form>
+
+                    <!---Name Javascript Code-->
+                    <script type="text/Javascript">
+                        function formValidation(){
+                            console.log('Validating user input:',document.contactForm.tester.value)
+                            const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                            if (document.contactForm.tester.value.trim() == ""){
+                                alert('How about...nah')
+                                return false;
+                            }
+
+                            if (validationRegex.test(document.contactForm.tester.value)){
+                                alert('How about...nah')
+                                return false
+                            }
+
+                        }
+
+                    </script>
+
+
+                </div>
+            </div>
+
+
+                <aside id="Add-Text">
+                    <!---Add Text Javascript Code-->
+                    <h1><Button id="AddTextButton" onclick="AddText()">Add Text</Button></h1>
+
+                    <script type="text/Javascript">
+                        function AddText(){
+                            const newElement = document.getElementById("HeaderChange");
+                            const AddText = document.createElement('AddText')
+                            AddText.textContent = 'strong';
+                            newElement.append(' - Adding Text');
+
+                            document.getElementById('AddTextButton').onclick = null;
+                            
+                        }
+
+
+                    </script>
+
+
+                </aside>
+             </div>
+
+        
+         
+
+
+
+
+         
+    </body>
+
+
+
+
+
+</html>
