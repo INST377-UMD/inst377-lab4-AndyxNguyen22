@@ -99,16 +99,17 @@
 
                 <aside id="Add-Text">
                     <!---Add Text Javascript Code-->
-                    <h1><Button onclick="AddText()">Add Text</Button></h1>
+                    <h1><Button id="AddTextButton" onclick="AddText()">Add Text</Button></h1>
 
                     <script type="text/Javascript">
                         function AddText(){
                             const newElement = document.getElementById("HeaderChange");
                             const AddText = document.createElement('AddText')
                             AddText.textContent = 'strong';
-                            newElement.append(' - Adding Text')
-                           
+                            newElement.append(' - Adding Text');
 
+                            document.getElementById('AddTextButton').onclick = null;
+                            
                         }
 
 
